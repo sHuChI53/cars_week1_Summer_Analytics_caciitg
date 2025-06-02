@@ -25,7 +25,6 @@ To analyze the `Cars.csv` dataset, explore its structure and features, identify 
 - pandas
 - numpy
 - matplotlib / seaborn (for visualizations)
-- scikit-learn (if modeling is included)
 
 ## 🔍 How to Run
 
