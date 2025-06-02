@@ -13,7 +13,7 @@ This repository contains the Week-1 assignment for **Summer Analytics 2025**, su
   - Basic insights from the Cars dataset
 
 - `Cars.csv`:  
-  The dataset used in the assignment. Contains information about various car models and their attributes (e.g., price, engine size, mileage, etc.).
+  The dataset used in the assignment. Contains information about various car models and their attributes (e.g., mpg, cylinders, displacement, car name, origin, etc.).
 
 ## 📊 Objective
 
