@@ -33,12 +33,10 @@ Note - matplotlib should be imported with the command :
 For eg, "import numpy as np"
 """
 
-#your code here
 import numpy as np
 
 """### 2) Read the csv file and assign it to a variable ."""
 
-#your code here
 import pandas as pd
 
 df = pd.read_csv('/content/Cars.csv')
@@ -47,19 +45,16 @@ df = pd.read_csv('/content/Cars.csv')
 Expected Output - (398, 9)
 """
 
-#your code here
 print(df.shape)
 
 """### 4) Print all columns of dataframe
 Return an array containing names of all the columns.
 """
 
-#your code here
 print(df.columns)
 
 """### 6) Set the 'name' column as the index of dataframe"""
 
-#your code here
 
 # Set the 'name' column as the index
 df.set_index('name', inplace=True)
@@ -74,7 +69,6 @@ print(df.head())
 
 """
 
-#your code here
 
 # Print unique mpg values
 unique_mpg = df['mpg'].unique()
@@ -82,7 +76,6 @@ print(list(unique_mpg))
 
 """### 8) Create a column which contains the horsepower divided by weightas its metric and make this new column the index."""
 
-#your code here
 
 # Create a new column with horsepower divided by weight
 df['hp_per_weight'] = df['horsepower'] / df['weight']
@@ -105,7 +98,6 @@ Now starts the real race i.e. graded questions of the quiz.**
 ### 1. What is name of car that has the highest horsepower?
 """
 
-#your code here
 
 # Reload dataset to restore 'name' column
 df = pd.read_csv('/content/Cars.csv')
@@ -116,7 +108,6 @@ print(max_hp_car)
 
 """### 2. How many cars have mpg ≥ 35?"""
 
-#your code here
 
 # Count cars with mpg ≥ 35
 count_mpg_35_or_more = (df['mpg'] >= 35).sum()
@@ -124,7 +115,6 @@ print(count_mpg_35_or_more)
 
 """### 3. What is the most common origin for cars with horsepower > 100 and weight < 3000?"""
 
-#your code here
 
 # Filter cars with horsepower > 100 and weight < 3000
 filtered_cars = df[(df['horsepower'] > 100) & (df['weight'] < 3000)]
@@ -135,15 +125,12 @@ print(most_common_origin)
 
 """### 4. What is the mean acceleration of cars from Japan? (rounded to 2 decimals)"""
 
-#your code here
 
 # Calculate mean acceleration for cars from Japan
 mean_acc_japan = df[df['origin'] == 'japan']['acceleration'].mean()
 print(round(mean_acc_japan, 2))
 
 """### 5. Which year had the highest average mpg?"""
-
-#your code here
 
 # Group by model_year and calculate average mpg
 avg_mpg_by_year = df.groupby('model_year')['mpg'].mean()
@@ -159,7 +146,6 @@ print(year_with_max_avg_mpg)
 ### Find the car (or cars) with the best ratio of horsepower to weight among all cars that also have above-median mpg.
 """
 
-#your code here
 
 # Drop rows with missing values in required columns
 df = df.dropna(subset=["horsepower", "weight", "mpg"])
@@ -179,7 +165,6 @@ print(best_cars[["name", "horsepower", "weight", "mpg", "hp_to_weight"]])
 
 """### Design a multi-line plot using Matplotlib or Seaborn that shows the evolution of average mpg over the years, separately for each origin"""
 
-#your code here
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -212,8 +197,6 @@ Hue order = ['japan', 'europe', 'usa']
 
 Add meaningful plot titles and axis titles.
 """
-
-#your code here
 
 # Scatter plot using seaborn
 plt.figure(figsize=(10, 6))
@@ -250,7 +233,6 @@ Bonus:
 Sort the result by number of appearances (descending), then mpg (descending).
 """
 
-#your code here
 
 # Extract base name (without trim or details)
 df["base_name"] = df["name"].str.extract(r'^([\w\-]+(?:\s[\w\-]+)?)')
